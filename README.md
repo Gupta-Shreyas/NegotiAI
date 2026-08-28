@@ -64,13 +64,13 @@ That's the core "proof" of the product — it's not just running a formula once,
 ---
 
 
-### What's intentionally simple right now
+### What's intentionally simple as of now :-
 
 The pricing rules engine in `providers.js` uses straightforward linear formulas, not complex risk modeling. This is on purpose — for a fast build, the interesting part is the visible negotiation and the reasoning behind the final decision, not the sophistication of the pricing math. That can get smarter later.
 
 ---
 
-## What's next
+## What's next to do :-
 
 1. Verify the full loop end-to-end with real Groq calls on both seed invoices.
 2. Confirm the memory effect is visibly working (Meridian Bank's terms shifting between Invoice 1 and Invoice 2).
