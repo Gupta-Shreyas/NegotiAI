@@ -63,29 +63,6 @@ That's the core "proof" of the product — it's not just running a formula once,
 
 ---
 
-## Try it yourself
-
-1. `npm install`
-2. Copy `.env.local.example` to `.env.local` and paste in your Groq API key:
-   ```
-   GROQ_API_KEY=your_real_key_here
-   ```
-3. `npm run dev`
-4. Open http://localhost:3000
-5. Pick an invoice from the dropdown, hit run, and watch the negotiation happen in real time.
-
----
-
-## How it's built (for the technical folks)
-
-| File | What it does |
-|---|---|
-| `lib/llm.js` | Single wrapper around the Groq API. If we ever swap LLM providers, this is the only file that changes. |
-| `lib/providers.js` | The 3 lender personas (Meridian Bank, Horizon Capital, Vantage Finance) and the rules engine behind them. The LLM writes the negotiation dialogue; this file decides the actual numbers each lender is allowed to offer. |
-| `lib/orchestrator.js` | The negotiation loop itself: opening offer → supplier responds → up to 3 rounds of counters → picks the best offer based on the business's weighted priorities (not just lowest rate) → generates a grounded, plain-English explanation for why that offer won. |
-| `data/seed-invoices.js` | Two demo invoices. Invoice 2 shares a buyer with Invoice 1 on purpose — so you can demo the "memory" effect described above. |
-| `app/page.js` | Bare-bones UI — pick an invoice, run it, see the raw transcript, offers, and winning deal. No styling yet, that's next phase. |
-| `app/api/negotiate/route.js` | The API route connecting the frontend to the orchestrator. |
 
 ### What's intentionally simple right now
 
