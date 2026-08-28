@@ -8,6 +8,8 @@ Negotia helps businesses compare and negotiate invoice financing offers without 
 
 A business selects an invoice, and Negotia allows multiple provider agents to negotiate financing terms before selecting the offer that best matches the business's priorities.
 
+**GitHub:** https://github.com/Gupta-Shreyas/negotia
+
 ---
 
 ## The Problem
