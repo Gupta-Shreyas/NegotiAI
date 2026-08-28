@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Gupta-Shreyas/negotia/main/assets/logo.png" width="60" style="border-radius:50%;">
+  <img src="https://raw.githubusercontent.com/Gupta-Shreyas/negotia/main/assets/logo.png" alt="NegotiAI Logo" width="100" style="border-radius: 16px;">
 </p>
 
 <h1 align="center">NegotiAI</h1>
+<p align="center">
+  <b>Autonomous Capital Negotiation Engine</b>
+</p>
 # NegotiAI
 
 **AI that negotiates invoice financing rates with multiple lenders — automatically.**
