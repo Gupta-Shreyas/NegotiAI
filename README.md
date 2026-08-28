@@ -2,7 +2,6 @@
 
 **AI that negotiates invoice financing rates with multiple lenders — automatically.**
 
-Repo: https://github.com/Gupta-Shreyas/negotia
 
 ---
 
