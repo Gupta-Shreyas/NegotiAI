@@ -98,7 +98,7 @@ export default function Home() {
         {/* Brand Header */}
         <div className="mb-10">
           <h1 className="font-serif text-2xl font-bold tracking-tight text-[#0A1128] m-0">
-            NEGOTIA
+            NegotiAI
           </h1>
           <div className="text-[10px] font-semibold tracking-widest text-[#6B7280] uppercase mt-1">
             AI Capital Negotiation
@@ -161,11 +161,10 @@ export default function Home() {
             <button
               onClick={runNegotiation}
               disabled={loading}
-              className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 shadow-md ${
-                loading
-                  ? "bg-[#6B7280] text-white cursor-wait opacity-80"
-                  : "bg-[#061226] text-white hover:bg-[#0F1E3D] active:scale-95"
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200 shadow-md ${loading
+                ? "bg-[#6B7280] text-white cursor-wait opacity-80"
+                : "bg-[#061226] text-white hover:bg-[#0F1E3D] active:scale-95"
+                }`}
             >
               {loading ? (
                 <span className="flex items-center gap-2">
@@ -206,10 +205,10 @@ export default function Home() {
 
         {/* ================= 2-COLUMN DASHBOARD GRID ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          
+
           {/* ================= LEFT COLUMN (4 Cols) ================= */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            
+
             {/* INVOICE DETAILS CARD */}
             <section className="bg-white border border-[#E2DDD4] rounded-xl p-6 shadow-sm">
               <h2 className="font-serif text-xl font-bold text-[#0A1128] mb-5 border-b border-[#F0ECE1] pb-2">
@@ -378,7 +377,7 @@ export default function Home() {
 
           {/* ================= RIGHT COLUMN (8 Cols) ================= */}
           <div className="lg:col-span-8 flex flex-col gap-6">
-            
+
             {/* CAPITAL PROVIDERS TABLE CARD */}
             <section className="bg-white border border-[#E2DDD4] rounded-xl p-6 shadow-sm overflow-hidden">
               <h2 className="font-serif text-xl font-bold text-[#0A1128] mb-5 border-b border-[#F0ECE1] pb-2">
@@ -403,11 +402,10 @@ export default function Home() {
                       return (
                         <tr
                           key={offer.providerId}
-                          className={`transition-colors ${
-                            isWinner
-                              ? "bg-[#ECE6D8] font-medium"
-                              : "hover:bg-[#FBF9F4]"
-                          }`}
+                          className={`transition-colors ${isWinner
+                            ? "bg-[#ECE6D8] font-medium"
+                            : "hover:bg-[#FBF9F4]"
+                            }`}
                         >
                           <td className="py-3.5 pr-4 font-semibold text-[#0A1128]">
                             <div className="flex items-center gap-2">
@@ -462,11 +460,10 @@ export default function Home() {
                           {turn.speaker} {isSupplier && "(AI)"}
                         </span>
                         <div
-                          className={`p-4 rounded-xl text-sm leading-relaxed ${
-                            isSupplier
-                              ? "bg-[#061226] text-white shadow-sm"
-                              : "bg-[#F3EFE3] text-[#0A1128] border border-[#E5DFCE]"
-                          }`}
+                          className={`p-4 rounded-xl text-sm leading-relaxed ${isSupplier
+                            ? "bg-[#061226] text-white shadow-sm"
+                            : "bg-[#F3EFE3] text-[#0A1128] border border-[#E5DFCE]"
+                            }`}
                         >
                           <p className="m-0">{turn.message}</p>
                           {turn.degraded && (
