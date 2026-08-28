@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-app: #F6F3EC;
+  --bg-sidebar: #ECE8DF;
+  --bg-card: #FFFFFF;
+  --border-color: #E2DDD4;
+  --border-subtle: #EDE8DF;
+  --navy-primary: #061226;
+  --navy-hover: #0F1E3D;
+  --navy-text: #0A1128;
+  --slate-text: #6B7280;
+  --slate-muted: #9CA3AF;
+  --wood-brown: #8A8474;
+  --wood-desk: #2E2016;
+  --wood-desk-surface: #38271B;
+  --wood-border: #4A3525;
+  --champagne-accent: #C8AD7F;
+  --champagne-light: #D5CFC4;
+  --bubble-supplier: #061226;
+  --bubble-provider: #F3EFE3;
+  --winner-bg: #ECE6D8;
+  --sage-green: #386641;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--navy-text);
+  background-color: var(--bg-app);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(circle at 50% 0%, rgba(200, 173, 127, 0.04) 0%, transparent 60%);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Paper Texture and Tactile Elevation */
+.paper-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 rgba(6, 18, 38, 0.04), 0 1px 2px -1px rgba(6, 18, 38, 0.02);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.paper-card-elevated {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 32px -6px rgba(6, 18, 38, 0.08), 0 4px 12px -2px rgba(6, 18, 38, 0.03);
+}
+
+/* Wood Desk Texture */
+.desk-surface {
+  background: linear-gradient(145deg, #38271B 0%, #291C13 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 20px 40px -10px rgba(41, 28, 19, 0.4);
+}
+
+/* Hairline rule animation */
+@keyframes rule-expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.animate-rule {
+  transform-origin: left;
+  animation: rule-expand 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Line-by-line editorial headline rise */
+@keyframes headline-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  opacity: 0;
+  animation: headline-rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Document Scanning Animation (GPU-accelerated transform) */
+@keyframes doc-scan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(180px);
+    opacity: 0;
+  }
+}
+
+.animate-doc-scan {
+  animation: doc-scan 2.4s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Floating Document Nodes */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 3.5s ease-in-out infinite;
+}
+
+/* Custom Financial Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CFC4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B2A6;
+}
+
+select, button, input {
+  font-family: inherit;
+}
+
+/* Subtle Fast Page Transition (180ms, non-blocking) */
+@keyframes page-enter {
+  from {
+    opacity: 0.2;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-enter {
+  animation: page-enter 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
