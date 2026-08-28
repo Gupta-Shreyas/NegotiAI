@@ -1,54 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --floor: #05070A;
-  --card: #0B1221;
-  --card-border: rgba(255, 255, 255, 0.05);
-  --text: #FFFFFF;
-  --text-dim: #909097;
-  --allow: #00C853;
-  --hold: #FFD600;
-  --block: #FF1744;
-  --freeze: #78909C;
+  --bg-app: #F6F3EC;
+  --bg-sidebar: #ECE8DF;
+  --bg-card: #FFFFFF;
+  --border-color: #E2DDD4;
+  --navy-primary: #061226;
+  --navy-text: #0A1128;
+  --muted-text: #6B7280;
+  --bubble-supplier: #061226;
+  --bubble-provider: #F3EFE3;
+  --winner-bg: #ECE6D8;
+  --sage-green: #386641;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
-  color: var(--text);
-  background: var(--floor);
+  color: var(--navy-text);
+  background-color: var(--bg-app);
   margin: 0;
-  padding: 80px 40px;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
-.mono {
+.font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
-select {
-  font-size: 1rem;
-  padding: 0.6rem 0.8rem;
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CFC4;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: var(--floor);
-  color: var(--text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B2A6;
+}
+
+/* Custom Select & Inputs */
+select {
+  font-family: inherit;
 }
 
 button {
-  font-size: 1rem;
   font-family: inherit;
 }
