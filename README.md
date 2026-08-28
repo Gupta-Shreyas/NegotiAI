@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Gupta-Shreyas/negotia/main/assets/logo.png" alt="NegotiAI Logo" width="100" style="border-radius: 16px;">
+  <img src="https://raw.githubusercontent.com/Gupta-Shreyas/negotia/main/public/assets/logo.png" alt="NegotiAI Logo" width="100" style="border-radius: 16px;">
 </p>
 
 <h1 align="center">NegotiAI</h1>
