@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Gupta-Shreyas/negotia/main/assets/logo.png" width="60" style="border-radius:50%;">
+</p>
+
+<h1 align="center">NegotiAI</h1>
 # NegotiAI
 
 **AI that negotiates invoice financing rates with multiple lenders — automatically.**
